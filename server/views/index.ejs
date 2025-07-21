@@ -70,7 +70,8 @@
         $('#table-<%= status.replace(/\s+/g, '-') %>').DataTable({
           paging: false,
           searching: true,
-          info: false
+          info: false,
+          sorting:false,
         });
       <% }); %>
     };
