@@ -1,0 +1,6 @@
+{
+  "statuses": ["new", "need_clarification", "needs_votes", "under_review"],
+  "statuses_labels": ["New", "Need Clarification", "Neeeds Votes", "Under Review"],
+  "top_n": 20,
+  "scrape_interval_hours": 24
+}

@@ -1,0 +1,738 @@
+{
+  "new": {
+    "https://community.fabric.microsoft.com/t5/Fabric-Ideas/User-Access-Management-for-Workspace-Member-Role/idi-p/4536262": {
+      "title": "User Access Management for Workspace Member Role",
+      "description": "Idea",
+      "votes": "528",
+      "date": "‎10-24-2023",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Ideas/User-Access-Management-for-Workspace-Member-Role/idi-p/4536262"
+    },
+    "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Make-Dr-Sum-as-a-certified-connector-for-Power-BI-Dr-Sum%E3%82%92Power/idi-p/4541175": {
+      "title": "Make Dr.Sum as a certified connector for Power BI(Dr.SumをPower BIの認定コネクタとして登録)",
+      "description": "Dr.Sum is a high-speed aggregate database with the top market share in Japan.",
+      "votes": "255",
+      "date": "‎06-20-2023",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Make-Dr-Sum-as-a-certified-connector-for-Power-BI-Dr-Sum%E3%82%92Power/idi-p/4541175"
+    },
+    "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Add-ability-for-Excel-workbooks-to-have-a-live-connection-to/idi-p/4438094": {
+      "title": "Add ability for Excel workbooks to have a live connection to SSAS",
+      "description": "No description",
+      "votes": "204",
+      "date": "‎12-10-2015",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Add-ability-for-Excel-workbooks-to-have-a-live-connection-to/idi-p/4438094"
+    },
+    "https://community.fabric.microsoft.com/t5/Fabric-Ideas/BI-Book-Power-BI-data-connector-as-approved-Data-source-in-Power/idi-p/4507639": {
+      "title": "BI Book Power BI data connector as approved Data source in Power BI desktop",
+      "description": "We use BI Book to get data form our systems into Power BI and they have a great Power BI connector for different tools but it requires installing the custom connector and also a data gateway to use it. Could we please get them to put it in as a connector in as an approved Data Source in Power BI?",
+      "votes": "182",
+      "date": "‎11-30-2023",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Ideas/BI-Book-Power-BI-data-connector-as-approved-Data-source-in-Power/idi-p/4507639"
+    },
+    "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Give-permissions-by-folder-in-Workspaces/idi-p/4538551": {
+      "title": "Give permissions by folder in Workspaces",
+      "description": "We need this feature to be added because is easier to manage permissions and we don't need to create lots of workspaces",
+      "votes": "166",
+      "date": "‎05-31-2024",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Give-permissions-by-folder-in-Workspaces/idi-p/4538551"
+    },
+    "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Hide-all-Visual-Level-Filter-Pane-Fields-for-Visuals/idi-p/4501183": {
+      "title": "Hide all Visual Level Filter Pane Fields for Visuals",
+      "description": "I often want to hide all visual level filters/fields on any visual on a report page. Ensuring users only ever see or use page or report level filters from the Filters Pane. Right now I need to click each visual and hide each field one at a time. It would be great to \"hide all fields\" per visual, or hide all visual level filters per page, or have a Power BI desktop master setting to have visual level filters hidden by default!",
+      "votes": "161",
+      "date": "‎09-20-2022",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Hide-all-Visual-Level-Filter-Pane-Fields-for-Visuals/idi-p/4501183"
+    },
+    "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Allow-to-change-Power-Automate-Environment-in-Power-Automate-for/idi-p/4518351": {
+      "title": "Allow to change Power Automate Environment in Power Automate for Power BI Visual",
+      "description": "Currently when creating a new flow via the Power Automate for Power BI visual, the flow is generated in the default environment. This should be configurable, so that I can choose which environment I would like to deploy my flow to (or consume from).",
+      "votes": "146",
+      "date": "‎04-07-2022",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Allow-to-change-Power-Automate-Environment-in-Power-Automate-for/idi-p/4518351"
+    },
+    "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Want-to-use-key-pair-authentication-access-from-Power-BI-to/idi-p/4505237": {
+      "title": "Want to use key pair authentication access from Power BI to Snowflake.",
+      "description": "With a recent update, Azure Data Factory now supports key pair authentication to Snowflake. I would like to unify the authentication method, so I would like Power BI and the on-premises data gateway to support key pair authentication as well.",
+      "votes": "144",
+      "date": "‎03-09-2024",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Want-to-use-key-pair-authentication-access-from-Power-BI-to/idi-p/4505237"
+    },
+    "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Add-Azure-Active-Directory-AAD-based-Single-Sign-On-SSO-with/idi-p/4505267": {
+      "title": "Add Azure Active Directory (AAD)-based Single Sign-On (SSO with OAuth) support for the Denodo connector",
+      "description": "Add to the Denodo connector the capability of enabling Single Sign-On (SSO with OAuth) with Azure Active Directory (AAD).",
+      "votes": "122",
+      "date": "‎01-20-2023",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Add-Azure-Active-Directory-AAD-based-Single-Sign-On-SSO-with/idi-p/4505267"
+    },
+    "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Date-Slicer-does-not-default-to-latest-date/idi-p/4492771": {
+      "title": "Date Slicer does not default to latest date",
+      "description": "Between Date slicer should get the default to latest date as it worked before.",
+      "votes": "121",
+      "date": "‎06-08-2023",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Date-Slicer-does-not-default-to-latest-date/idi-p/4492771"
+    },
+    "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Ability-to-add-query-tag-for-reports-using-Snowflake/idi-p/4532578": {
+      "title": "Ability to add query tag for reports using Snowflake",
+      "description": "A common ask I have been receiving is the ability to determine which PowerBI report is executing from in Snowflake. The ask is to add the ability to supply a query tag at the report level when executing against Snowflake. This will solve two issues: 1. Which report the executed a particular query. 2. For large organizations, this will give the ability to track the Snowflake costs by report.",
+      "votes": "117",
+      "date": "‎02-24-2022",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Ability-to-add-query-tag-for-reports-using-Snowflake/idi-p/4532578"
+    },
+    "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Disable-Q-A-Visual-popping-with-Double-Click/idi-p/4530070": {
+      "title": "Disable Q&A Visual popping with Double Click",
+      "description": "This feature is the bane of my existence. This feature is just not used enough to warrant being added via a double-click which is a super common Windows action.",
+      "votes": "117",
+      "date": "‎07-29-2021",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Disable-Q-A-Visual-popping-with-Double-Click/idi-p/4530070"
+    },
+    "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Support-the-Persian-Solar-Hijri-Calendar-in-Power-BI/idi-p/4532643": {
+      "title": "Support the Persian Solar Hijri Calendar in Power BI",
+      "description": "As an Iranian user of Power BI, I would like to see support for the Persian Solar Hijri calendar in Power BI. Power BI and DAX (Time Intelligence) functions do not currently support the Iranian Solar Hijri calendar (or any other calendar that differs from the Roman calendar in structure), so users must either add the Roman calendar and Persian Calendar tables to their model or create a complex date table (mixture of both calendars) and barely use those tables in Power BI. The Persian Solar Hijri calendar is widely used in Iran, Afghanistan, Tajikistan and some other countries, and it is an extremely significant part of the daily life of millions of people.",
+      "votes": "116",
+      "date": "‎02-15-2023",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Support-the-Persian-Solar-Hijri-Calendar-in-Power-BI/idi-p/4532643"
+    },
+    "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Page-Level-security-in-reports/idi-p/4606366": {
+      "title": "Page-Level security in reports",
+      "description": "It would be really useful to have security settings to show or hide individual report pages.",
+      "votes": "114",
+      "date": "‎03-12-2025",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Page-Level-security-in-reports/idi-p/4606366"
+    },
+    "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Power-BI-connector-to-consume-Autodesk-Design-Model-Data/idi-p/4531093": {
+      "title": "Power BI connector to consume Autodesk Design/Model Data",
+      "description": "As a person building dashboards for construction companies, I need a way to easily pull in BIM model data from Autodesk products into Power BI. This allows me to analyze various quality and project progress metrics and sharing that analysis with multiple teams...without needing them to know BIM.",
+      "votes": "113",
+      "date": "‎05-22-2024",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Power-BI-connector-to-consume-Autodesk-Design-Model-Data/idi-p/4531093"
+    },
+    "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Auto-Fitting-Column-Width/idi-p/4506301": {
+      "title": "Auto Fitting Column Width",
+      "description": "pls have option of AUTOFIT, liek Tableau..........wherein it auto adjuts height and width,both",
+      "votes": "112",
+      "date": "‎07-28-2021",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Auto-Fitting-Column-Width/idi-p/4506301"
+    },
+    "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Conditional-formatting-for-lines-in-Line-Chart/idi-p/4520350": {
+      "title": "Conditional formatting for lines in Line Chart",
+      "description": "Today, it is impossible to set Conditional formatting for the Lines in Line charts.",
+      "votes": "109",
+      "date": "‎12-08-2022",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Conditional-formatting-for-lines-in-Line-Chart/idi-p/4520350"
+    },
+    "https://community.fabric.microsoft.com/t5/Fabric-Ideas/UTC-to-Local-Time-Conversion-in-Power-BI-service/idi-p/4513933": {
+      "title": "UTC to Local Time Conversion in Power BI service",
+      "description": "This is a feature which we definitely need. We use an Azure Data Explorer to store data from globally spread sites. To have a single data schema we store them in UTC format. But of course our customers like to see their data in their local time.",
+      "votes": "109",
+      "date": "‎08-05-2021",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Ideas/UTC-to-Local-Time-Conversion-in-Power-BI-service/idi-p/4513933"
+    },
+    "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Out-of-the-box-Power-BI-Connector-for-Samsara/idi-p/4537106": {
+      "title": "Out-of-the-box Power BI Connector for Samsara",
+      "description": "This is a placeholder idea for having an out-of-the-box Samsara<>Power BI Connector. If you would like to see this happen, please upvote the thread!",
+      "votes": "103",
+      "date": "‎09-12-2023",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Out-of-the-box-Power-BI-Connector-for-Samsara/idi-p/4537106"
+    },
+    "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Adverity-gt-PowerBI-native-integration/idi-p/4538751": {
+      "title": "Adverity -> PowerBI native integration",
+      "description": "The ability to pull data from Adverity directly into PowerBI via a native solution.",
+      "votes": "96",
+      "date": "‎03-11-2024",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Adverity-gt-PowerBI-native-integration/idi-p/4538751"
+    },
+    "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Configure-S3-shortcut-using-temporary-credentials/idi-p/4508519": {
+      "title": "Configure S3 shortcut using temporary credentials.",
+      "description": "Currently, Microsoft Fabric supports only long-term credentials for S3 shortcuts. However, I would like to suggest the addition of support for temporary credentials obtained through boto3. Specifically, it would be extremely beneficial if the connection could use a sessionToken along with the access_key and secret_key.",
+      "votes": "12",
+      "date": "‎05-23-2024",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Configure-S3-shortcut-using-temporary-credentials/idi-p/4508519"
+    },
+    "https://community.fabric.microsoft.com/t5/Fabric-Ideas/bd-p/fbc_ideas": {
+      "title": "Enrich applicaiton name property when connecting to SQL Server databases",
+      "description": "No description",
+      "votes": "16",
+      "date": "‎10-07-2024",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Ideas/idb-p/fbc_ideas"
+    },
+    "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Identity-Federation-for-S3-shortcuts-for-tokenless/idi-p/4507528": {
+      "title": "Identity Federation for S3 shortcuts for tokenless Authentication based on Workspace Identity",
+      "description": "To work with S3 shortcuts without storing credentials somewhere in Fabric would be amazing and more secure.",
+      "votes": "20",
+      "date": "‎10-25-2024",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Identity-Federation-for-S3-shortcuts-for-tokenless/idi-p/4507528"
+    },
+    "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Sort-matrix-by-Parameter-field/idi-p/4506104": {
+      "title": "Sort matrix by Parameter field",
+      "description": "I really like the ability to use Parameter fields in my matrix visuals, but it would be even better if I was able to sort the matrix based on the (first) field I select in my parameter fileld value. Different kind of Bar charts will automatically sort by the first parameter filed selected, so here it works \"per default\"",
+      "votes": "5",
+      "date": "‎09-30-2022",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Sort-matrix-by-Parameter-field/idi-p/4506104"
+    },
+    "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Field-Parameter-Maintains-Matrix-Drill-Level/idi-p/4515109": {
+      "title": "Field Parameter Maintains Matrix Drill Level",
+      "description": "I've been using field parameters to toggle between which field is displayed in a matrix. This works great when there's only one level of rows to display. However, when I include an additional row level to my matrix, changing the field parameter will reset the drill level to the highest level every time. This leads to poor user experience for the audience, as they have to click to expand the rows every time. It would be great if the field parameters would maintain the user-defined drill level, instead of resetting it.",
+      "votes": "20",
+      "date": "‎06-28-2022",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Field-Parameter-Maintains-Matrix-Drill-Level/idi-p/4515109"
+    },
+    "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Automatically-Drill-Down-Expand-Matrix-when-using-field/idi-p/4520217": {
+      "title": "Automatically Drill-Down/Expand Matrix when using field parameters",
+      "description": "The field parameters are a really handy feature for creating dynamic reports which let viewers choose the look of their matrix.",
+      "votes": "3",
+      "date": "‎03-07-2024",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Automatically-Drill-Down-Expand-Matrix-when-using-field/idi-p/4520217"
+    }
+  },
+  "need_clarification": {
+    "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Enable-field-parameters-for-live-connection/idi-p/4491282": {
+      "title": "Enable field parameters for live connection",
+      "description": "One of the limitations of the use of Power BI field parameters is that they can't be used in a live connection model.",
+      "votes": "47",
+      "date": "‎01-25-2024",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Enable-field-parameters-for-live-connection/idi-p/4491282"
+    },
+    "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Gen2-Capacity-Monitoring-Memory-in-Metrics/idi-p/4536500": {
+      "title": "Gen2 Capacity Monitoring Memory in Metrics",
+      "description": "Currently, the fact that there is no insight into memory allocation during refresh in Gen2 metric apps, this is costing us $1500/mo in required tier capacity upgrade to handle our data refresh! So yeah, this seems like a pretty big deal! I'd say +1000 on the votes for this \"idea\" especially since this was a feature in the previous Gen!",
+      "votes": "39",
+      "date": "‎10-25-2021",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Gen2-Capacity-Monitoring-Memory-in-Metrics/idi-p/4536500"
+    },
+    "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Manage-and-Control-Personel-Bookmarks-in-Power-BI-Service/idi-p/4596575": {
+      "title": "Manage and Control Personel Bookmarks in Power BI Service",
+      "description": "It should be possible for admin to monitor and manage the personal bookmark created by end users.",
+      "votes": "25",
+      "date": "‎03-05-2025",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Manage-and-Control-Personel-Bookmarks-in-Power-BI-Service/idi-p/4596575"
+    },
+    "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Add-tagging-capability-to-Dataset-settings/idi-p/4475465": {
+      "title": "Add tagging capability to Dataset settings",
+      "description": "How can tagging help \"others know exactly what's in the Dataset and key information about it\"?",
+      "votes": "10",
+      "date": "‎11-27-2019",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Add-tagging-capability-to-Dataset-settings/idi-p/4475465"
+    },
+    "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Don-t-affect-sparkline-with-page-visual-filters/idi-p/4531294": {
+      "title": "Don't affect sparkline with page/visual filters",
+      "description": "I have a matrix in which I can quickly find data over a given time period (by a calendar filter on the visual), which in my case is last week. In that same matrix I want to add a sparkline, but due to the visual filter, the sparkline only shows one data point (last week), which makes no sense. Ideally you'll have extra filtering options for the sparkline in the menu that pops up when you add them.",
+      "votes": "6",
+      "date": "‎04-13-2022",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Don-t-affect-sparkline-with-page-visual-filters/idi-p/4531294"
+    },
+    "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Pie-chart-bubble-chart-in-Matrix-Visual-as-sparkline/idi-p/4503858": {
+      "title": "Pie chart bubble chart in Matrix Visual as sparkline",
+      "description": "Create pie chart or bubble chart in Matrix Visual like sparkline features.",
+      "votes": "6",
+      "date": "‎10-04-2022",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Pie-chart-bubble-chart-in-Matrix-Visual-as-sparkline/idi-p/4503858"
+    },
+    "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Wrong-cross-filtering-behavior-when-using-Field-parameters/idi-p/4522879": {
+      "title": "Wrong cross filtering behavior when using Field parameters (!)",
+      "description": "Basic scenario (without Field parameters):",
+      "votes": "5",
+      "date": "‎01-31-2024",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Wrong-cross-filtering-behavior-when-using-Field-parameters/idi-p/4522879"
+    },
+    "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Alternative-way-to-monitor-the-capacity-usage-for-F4-capacity/idi-p/4535242": {
+      "title": "Alternative way to monitor the capacity usage for F4 capacity",
+      "description": "We want F4 fabric SKU to be supported in Fabrics metrics app to analyze the capacity usage.",
+      "votes": "4",
+      "date": "‎07-05-2024",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Alternative-way-to-monitor-the-capacity-usage-for-F4-capacity/idi-p/4535242"
+    },
+    "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Detect-and-control-unused-Fabric-Power-items-in-the-tenant/idi-p/4666312": {
+      "title": "Detect and control unused Fabric/Power items in the tenant",
+      "description": "Most users want to detect Fabric and Power BI items in the tenant which are not used for long time. \nThere are ways that it can be checked by Admin Monitoring feature and Power BI Rest APIs. \nHowever, admin monitoring is limited to 30 days data and using Power BI Rest API requires the user to do manual work casuing human mistake.",
+      "votes": "3",
+      "date": "‎04-24-2025",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Detect-and-control-unused-Fabric-Power-items-in-the-tenant/idi-p/4666312"
+    },
+    "https://community.fabric.microsoft.com/t5/Fabric-Ideas/BUG-Renaming-a-field-parameter-causes-the-first-field-parameter/idi-p/4528016": {
+      "title": "BUG: Renaming a field parameter causes the first field parameter in the list to be removed",
+      "description": "I can't find where to report bugs to, so submitting this as \"an idea\".",
+      "votes": "2",
+      "date": "‎05-24-2024",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Ideas/BUG-Renaming-a-field-parameter-causes-the-first-field-parameter/idi-p/4528016"
+    },
+    "https://community.fabric.microsoft.com/t5/Fabric-Ideas/More-Display-Language-Options/idi-p/4521809": {
+      "title": "More Display Language Options",
+      "description": "Hello,",
+      "votes": "2",
+      "date": "‎01-30-2025",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Ideas/More-Display-Language-Options/idi-p/4521809"
+    },
+    "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Improving-field-parameters/idi-p/4501752": {
+      "title": "Improving field parameters",
+      "description": "Currently the we need to depend on code to update field parameters.",
+      "votes": "2",
+      "date": "‎12-25-2023",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Improving-field-parameters/idi-p/4501752"
+    },
+    "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Field-parameters-for-spark-lines/idi-p/4497632": {
+      "title": "Field parameters for spark lines",
+      "description": "Currently field parameters do not work with spark lines when choosing to add the parameter as X axis",
+      "votes": "2",
+      "date": "‎12-09-2022",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Field-parameters-for-spark-lines/idi-p/4497632"
+    },
+    "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Visual-Calculation-Support/idi-p/4541549": {
+      "title": "Visual Calculation Support",
+      "description": "Visual calculations make building reports so much easier but there are still some bugs that need to be worked out. For instance, building a bar graph using the \"Percentage of Grand Total\" template was very easy and works perfectly... until you try to format the percentage as an actual percent. Then the graph shows no data. Fix little things like that and these will become an integral part of working in Power BI and eliminate so much of the natural clunkiness of DAX measures.",
+      "votes": "1",
+      "date": "‎04-10-2024",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Visual-Calculation-Support/idi-p/4541549"
+    },
+    "https://community.fabric.microsoft.com/t5/Fabric-Ideas/change-axis-field-via-parameter-slicer/idi-p/4531722": {
+      "title": "change axis field via parameter slicer",
+      "description": "Field parameters can do this, or am I missing something? https://learn.microsoft.com/en-us/power-bi/create-reports/power-bi-field-parameters",
+      "votes": "1",
+      "date": "‎02-13-2019",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Ideas/change-axis-field-via-parameter-slicer/idi-p/4531722"
+    },
+    "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Field-Parameter/idi-p/4531653": {
+      "title": "Field Parameter",
+      "description": "I have created field parameter and used in a grid with my user, I have copied the same report and opened with another user, but the report automatically replaced field parameter field with table field in the grid.",
+      "votes": "1",
+      "date": "‎11-04-2022",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Field-Parameter/idi-p/4531653"
+    },
+    "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Enable-hierarchies-within-Field-Parameters/idi-p/4530765": {
+      "title": "Enable hierarchies within Field Parameters",
+      "description": "Understand from support that there is a known limitation within field parameters when grouped with a hierarchy.",
+      "votes": "1",
+      "date": "‎09-26-2024",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Enable-hierarchies-within-Field-Parameters/idi-p/4530765"
+    },
+    "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Field-Parameter-personalise-visual/idi-p/4525030": {
+      "title": "Field Parameter - personalise visual",
+      "description": "If the personalise visual is not available (and it seems not - which is not great if only one of the elements is using a field parameter, might still be good to personalise the other elements) - should the icon to personalise disappear?",
+      "votes": "1",
+      "date": "‎05-19-2022",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Field-Parameter-personalise-visual/idi-p/4525030"
+    },
+    "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Limits-in-visual-calculations-in-matrixes/idi-p/4519402": {
+      "title": "Limits in visual calculations in matrixes",
+      "description": "Clarifying the issue with an example:",
+      "votes": "1",
+      "date": "‎03-27-2024",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Limits-in-visual-calculations-in-matrixes/idi-p/4519402"
+    },
+    "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Table-and-Matrix-Visuals/idi-p/4497400": {
+      "title": "Table and Matrix Visuals",
+      "description": "Develop table and matrix visual in a sense that is similar to how excel functions. There are limitations in creating rows and columns in matrix visuals such as adding a final column that is not a \"total\" of the values. Adding sparkline is also difficult for both visuals so I think you should focus on that as well",
+      "votes": "1",
+      "date": "‎10-21-2024",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Table-and-Matrix-Visuals/idi-p/4497400"
+    },
+    "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Configure-S3-shortcut-using-temporary-credentials/idi-p/4508519": {
+      "title": "Configure S3 shortcut using temporary credentials.",
+      "description": "Currently, Microsoft Fabric supports only long-term credentials for S3 shortcuts. However, I would like to suggest the addition of support for temporary credentials obtained through boto3. Specifically, it would be extremely beneficial if the connection could use a sessionToken along with the access_key and secret_key.",
+      "votes": "12",
+      "date": "‎05-23-2024",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Configure-S3-shortcut-using-temporary-credentials/idi-p/4508519"
+    },
+    "https://community.fabric.microsoft.com/t5/Fabric-Ideas/bd-p/fbc_ideas": {
+      "title": "Enrich applicaiton name property when connecting to SQL Server databases",
+      "description": "No description",
+      "votes": "16",
+      "date": "‎10-07-2024",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Ideas/idb-p/fbc_ideas"
+    },
+    "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Identity-Federation-for-S3-shortcuts-for-tokenless/idi-p/4507528": {
+      "title": "Identity Federation for S3 shortcuts for tokenless Authentication based on Workspace Identity",
+      "description": "To work with S3 shortcuts without storing credentials somewhere in Fabric would be amazing and more secure.",
+      "votes": "20",
+      "date": "‎10-25-2024",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Identity-Federation-for-S3-shortcuts-for-tokenless/idi-p/4507528"
+    },
+    "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Sort-matrix-by-Parameter-field/idi-p/4506104": {
+      "title": "Sort matrix by Parameter field",
+      "description": "I really like the ability to use Parameter fields in my matrix visuals, but it would be even better if I was able to sort the matrix based on the (first) field I select in my parameter fileld value. Different kind of Bar charts will automatically sort by the first parameter filed selected, so here it works \"per default\"",
+      "votes": "5",
+      "date": "‎09-30-2022",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Sort-matrix-by-Parameter-field/idi-p/4506104"
+    },
+    "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Field-Parameter-Maintains-Matrix-Drill-Level/idi-p/4515109": {
+      "title": "Field Parameter Maintains Matrix Drill Level",
+      "description": "I've been using field parameters to toggle between which field is displayed in a matrix. This works great when there's only one level of rows to display. However, when I include an additional row level to my matrix, changing the field parameter will reset the drill level to the highest level every time. This leads to poor user experience for the audience, as they have to click to expand the rows every time. It would be great if the field parameters would maintain the user-defined drill level, instead of resetting it.",
+      "votes": "20",
+      "date": "‎06-28-2022",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Field-Parameter-Maintains-Matrix-Drill-Level/idi-p/4515109"
+    },
+    "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Automatically-Drill-Down-Expand-Matrix-when-using-field/idi-p/4520217": {
+      "title": "Automatically Drill-Down/Expand Matrix when using field parameters",
+      "description": "The field parameters are a really handy feature for creating dynamic reports which let viewers choose the look of their matrix.",
+      "votes": "3",
+      "date": "‎03-07-2024",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Automatically-Drill-Down-Expand-Matrix-when-using-field/idi-p/4520217"
+    }
+  },
+  "needs_votes": {
+    "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Epic-idea-New-card-visual/idi-p/4542826": {
+      "title": "Epic idea: New card visual",
+      "description": "The current card visual forces users to overlap elements or waste copious amounts of time creating custom visuals. The new card feature should give users the ability to create multiple cards in a single container and provide a greater level of customization.",
+      "votes": "5,098",
+      "date": "‎10-07-2024",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Epic-idea-New-card-visual/idi-p/4542826"
+    },
+    "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Epic-idea-Hide-show-expand-and-collapse-tabular-columns/idi-p/4542315": {
+      "title": "Epic idea: Hide, show, expand, and collapse tabular columns",
+      "description": "It would be beneficial to incorporate features from Pivot tables that allow for the expansion and collapse of columns and hierarchical column groups within tabular visuals. This would not only solve the current limitations of matrices but also provide report creators with the flexibility to hide and show rows and columns, saving these settings for future use, thus eliminating the need to scroll through irrelevant data.",
+      "votes": "5,011",
+      "date": "‎10-07-2024",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Epic-idea-Hide-show-expand-and-collapse-tabular-columns/idi-p/4542315"
+    },
+    "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Epic-idea-Custom-totals-for-tabular-visuals/idi-p/4493745": {
+      "title": "Epic idea: Custom totals for tabular visuals",
+      "description": "Enabling customized calculations at the query level for subtotals and grand totals would offer greater flexibility in reporting and preserve performance. Efficient organization of control settings to modify the style of these totals separately will empower report creators to achieve their desired appearance, while addressing their need for more control and customization in reporting.",
+      "votes": "4,627",
+      "date": "‎10-07-2024",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Epic-idea-Custom-totals-for-tabular-visuals/idi-p/4493745"
+    },
+    "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Epic-idea-Apply-filter-selections-automatically/idi-p/4526879": {
+      "title": "Epic idea: Apply filter selections automatically",
+      "description": "Imagine a world where report creators can automatically apply slicer and filter selections based on specific logic, revolutionizing data analysis and user experience. This innovative approach eliminates any need for complex workarounds, optimizes slicer functionality, and paves the way for more efficient and effective data reporting.",
+      "votes": "4,479",
+      "date": "‎10-07-2024",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Epic-idea-Apply-filter-selections-automatically/idi-p/4526879"
+    },
+    "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Epic-idea-Conditioanl-formatting-parameters-displayed-in-legends/idi-p/4523395": {
+      "title": "Epic idea: Conditioanl formatting parameters displayed in legends and tooltips",
+      "description": "Interpreting visuals without a clear legend to indicate logic behind specific styles can lead to confusion and decision-making errors. An idea to enhance clarity and transparency by ensuring legends and tooltips accurately display colors, patterns, and other visual components influenced by logics, would enable report consumers to easily understand the applied logic and make more effective decisions.",
+      "votes": "3,222",
+      "date": "‎10-07-2024",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Epic-idea-Conditioanl-formatting-parameters-displayed-in-legends/idi-p/4523395"
+    },
+    "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Epic-idea-Advanced-primary-axis/idi-p/4537379": {
+      "title": "Epic idea: Advanced primary axis",
+      "description": "The primary axis are outdated and require significant improvement when compared to Excel. This makes it difficult for report creators and often leads to problems when trying to manage and style them effectively. By offering more format settings, greater control over displayed data can be provided, especially if axis ticks, new gridlines, and separators are also included.",
+      "votes": "1,896",
+      "date": "‎10-07-2024",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Epic-idea-Advanced-primary-axis/idi-p/4537379"
+    },
+    "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Calculated-measures-when-live-connected-to-MDX-cubes/idi-p/4528644": {
+      "title": "Calculated measures when live connected to MDX cubes",
+      "description": "No description",
+      "votes": "1,744",
+      "date": "‎05-03-2017",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Calculated-measures-when-live-connected-to-MDX-cubes/idi-p/4528644"
+    },
+    "https://community.fabric.microsoft.com/t5/Fabric-Ideas/DAX-Query-Language-Visual/idi-p/4429972": {
+      "title": "DAX Query Language Visual",
+      "description": "No description",
+      "votes": "1,663",
+      "date": "‎11-03-2017",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Ideas/DAX-Query-Language-Visual/idi-p/4429972"
+    },
+    "https://community.fabric.microsoft.com/t5/Fabric-Ideas/freeze-column-in-a-table-chart/idi-p/4528929": {
+      "title": "freeze column in a table chart",
+      "description": "No description",
+      "votes": "1,592",
+      "date": "‎01-29-2015",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Ideas/freeze-column-in-a-table-chart/idi-p/4528929"
+    },
+    "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Epic-idea-Small-multiples-for-cards/idi-p/4535704": {
+      "title": "Epic idea: Small multiples for cards",
+      "description": "It’s challenging and time-consuming for both new and experienced report creators to organize data when trying to split cards into categories. By introducing small multiples, it could be a familiar and easy way for report creators to intuitively categorize data, especially if they had more control over layout and formatting.",
+      "votes": "1,482",
+      "date": "‎10-07-2024",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Epic-idea-Small-multiples-for-cards/idi-p/4535704"
+    },
+    "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Slicer-Search-Add-quot-Select-All-Results-quot-option/idi-p/4455221": {
+      "title": "Slicer Search - Add \"Select All Results\" option",
+      "description": "No description",
+      "votes": "1,391",
+      "date": "‎08-29-2016",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Slicer-Search-Add-quot-Select-All-Results-quot-option/idi-p/4455221"
+    },
+    "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Extend-DAX-Format-Function-for-colors/idi-p/4487691": {
+      "title": "Extend DAX Format Function for colors",
+      "description": "No description",
+      "votes": "1,319",
+      "date": "‎09-22-2017",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Extend-DAX-Format-Function-for-colors/idi-p/4487691"
+    },
+    "https://community.fabric.microsoft.com/t5/Fabric-Ideas/export-to-PowerPoint-via-the-power-BI-desktop-only/idi-p/4438317": {
+      "title": "export to PowerPoint via the power BI desktop only",
+      "description": "No description",
+      "votes": "1,275",
+      "date": "‎01-19-2017",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Ideas/export-to-PowerPoint-via-the-power-BI-desktop-only/idi-p/4438317"
+    },
+    "https://community.fabric.microsoft.com/t5/Fabric-Ideas/VBA-for-Power-BI-Desktop/idi-p/4471152": {
+      "title": "VBA for Power BI Desktop",
+      "description": "No description",
+      "votes": "1,229",
+      "date": "‎06-05-2016",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Ideas/VBA-for-Power-BI-Desktop/idi-p/4471152"
+    },
+    "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Set-default-theme/idi-p/4447109": {
+      "title": "Set default theme",
+      "description": "No description",
+      "votes": "1,218",
+      "date": "‎01-09-2017",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Set-default-theme/idi-p/4447109"
+    },
+    "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Table-Matrix-Total-Column-on-first-position/idi-p/4425168": {
+      "title": "Table / Matrix: Total Column on first position",
+      "description": "No description",
+      "votes": "1,206",
+      "date": "‎05-01-2017",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Table-Matrix-Total-Column-on-first-position/idi-p/4425168"
+    },
+    "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Allow-for-point-in-time-snapshots-for-reports-dataset/idi-p/4521709": {
+      "title": "Allow for point-in-time snapshots for reports/dataset",
+      "description": "No description",
+      "votes": "1,192",
+      "date": "‎02-03-2016",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Allow-for-point-in-time-snapshots-for-reports-dataset/idi-p/4521709"
+    },
+    "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Make-functions-refreshable-when-the-data-source-is-a-parameter/idi-p/4507359": {
+      "title": "Make functions refreshable when the data source is a parameter of the function",
+      "description": "No description",
+      "votes": "1,167",
+      "date": "‎08-13-2015",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Make-functions-refreshable-when-the-data-source-is-a-parameter/idi-p/4507359"
+    },
+    "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Axis-with-configurable-units-Interval/idi-p/4483379": {
+      "title": "Axis with configurable units (/Interval)",
+      "description": "No description",
+      "votes": "1,162",
+      "date": "‎07-20-2016",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Axis-with-configurable-units-Interval/idi-p/4483379"
+    },
+    "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Full-Screen-Dashboards-in-Power-BI-Desktop/idi-p/4533281": {
+      "title": "Full Screen Dashboards in Power BI Desktop",
+      "description": "No description",
+      "votes": "1,148",
+      "date": "‎10-04-2016",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Full-Screen-Dashboards-in-Power-BI-Desktop/idi-p/4533281"
+    },
+    "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Configure-S3-shortcut-using-temporary-credentials/idi-p/4508519": {
+      "title": "Configure S3 shortcut using temporary credentials.",
+      "description": "Currently, Microsoft Fabric supports only long-term credentials for S3 shortcuts. However, I would like to suggest the addition of support for temporary credentials obtained through boto3. Specifically, it would be extremely beneficial if the connection could use a sessionToken along with the access_key and secret_key.",
+      "votes": "12",
+      "date": "‎05-23-2024",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Configure-S3-shortcut-using-temporary-credentials/idi-p/4508519"
+    },
+    "https://community.fabric.microsoft.com/t5/Fabric-Ideas/bd-p/fbc_ideas": {
+      "title": "Enrich applicaiton name property when connecting to SQL Server databases",
+      "description": "No description",
+      "votes": "16",
+      "date": "‎10-07-2024",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Ideas/idb-p/fbc_ideas"
+    },
+    "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Identity-Federation-for-S3-shortcuts-for-tokenless/idi-p/4507528": {
+      "title": "Identity Federation for S3 shortcuts for tokenless Authentication based on Workspace Identity",
+      "description": "To work with S3 shortcuts without storing credentials somewhere in Fabric would be amazing and more secure.",
+      "votes": "20",
+      "date": "‎10-25-2024",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Identity-Federation-for-S3-shortcuts-for-tokenless/idi-p/4507528"
+    },
+    "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Sort-matrix-by-Parameter-field/idi-p/4506104": {
+      "title": "Sort matrix by Parameter field",
+      "description": "I really like the ability to use Parameter fields in my matrix visuals, but it would be even better if I was able to sort the matrix based on the (first) field I select in my parameter fileld value. Different kind of Bar charts will automatically sort by the first parameter filed selected, so here it works \"per default\"",
+      "votes": "5",
+      "date": "‎09-30-2022",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Sort-matrix-by-Parameter-field/idi-p/4506104"
+    },
+    "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Field-Parameter-Maintains-Matrix-Drill-Level/idi-p/4515109": {
+      "title": "Field Parameter Maintains Matrix Drill Level",
+      "description": "I've been using field parameters to toggle between which field is displayed in a matrix. This works great when there's only one level of rows to display. However, when I include an additional row level to my matrix, changing the field parameter will reset the drill level to the highest level every time. This leads to poor user experience for the audience, as they have to click to expand the rows every time. It would be great if the field parameters would maintain the user-defined drill level, instead of resetting it.",
+      "votes": "20",
+      "date": "‎06-28-2022",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Field-Parameter-Maintains-Matrix-Drill-Level/idi-p/4515109"
+    },
+    "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Automatically-Drill-Down-Expand-Matrix-when-using-field/idi-p/4520217": {
+      "title": "Automatically Drill-Down/Expand Matrix when using field parameters",
+      "description": "The field parameters are a really handy feature for creating dynamic reports which let viewers choose the look of their matrix.",
+      "votes": "3",
+      "date": "‎03-07-2024",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Automatically-Drill-Down-Expand-Matrix-when-using-field/idi-p/4520217"
+    }
+  },
+  "under_review": {
+    "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Load-data-from-Office-365-Planner-to-PowerBI/idi-p/4450357": {
+      "title": "Load data from Office 365 Planner to PowerBI",
+      "description": "Create a connector for Office 365 Planner.",
+      "votes": "3,755",
+      "date": "‎10-26-2016",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Load-data-from-Office-365-Planner-to-PowerBI/idi-p/4450357"
+    },
+    "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Add-quot-monthly-quot-as-a-scheduled-refresh-option/idi-p/4509337": {
+      "title": "Add \"monthly\" as a scheduled refresh option",
+      "description": "No description",
+      "votes": "3,138",
+      "date": "‎08-19-2015",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Add-quot-monthly-quot-as-a-scheduled-refresh-option/idi-p/4509337"
+    },
+    "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Clustered-stacked-Chart/idi-p/4540673": {
+      "title": "Clustered+stacked Chart",
+      "description": "No description",
+      "votes": "2,586",
+      "date": "‎12-05-2014",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Clustered-stacked-Chart/idi-p/4540673"
+    },
+    "https://community.fabric.microsoft.com/t5/Fabric-Ideas/When-showing-subtotals-at-the-bottom-show-the-attributes-there/idi-p/4527524": {
+      "title": "When showing subtotals at the bottom, show the attributes there as well and not on top",
+      "description": "No description",
+      "votes": "2,312",
+      "date": "‎11-15-2018",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Ideas/When-showing-subtotals-at-the-bottom-show-the-attributes-there/idi-p/4527524"
+    },
+    "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Support-for-custom-fonts/idi-p/4482045": {
+      "title": "Support for custom fonts",
+      "description": "No description",
+      "votes": "1,986",
+      "date": "‎07-24-2015",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Support-for-custom-fonts/idi-p/4482045"
+    },
+    "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Matrix-Table-grand-totals-with-Measures/idi-p/4475982": {
+      "title": "Matrix/Table grand totals with Measures",
+      "description": "No description",
+      "votes": "1,681",
+      "date": "‎07-16-2018",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Matrix-Table-grand-totals-with-Measures/idi-p/4475982"
+    },
+    "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Export-charts-directly-to-excel/idi-p/4432994": {
+      "title": "Export charts directly to excel",
+      "description": "No description",
+      "votes": "1,665",
+      "date": "‎12-18-2017",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Export-charts-directly-to-excel/idi-p/4432994"
+    },
+    "https://community.fabric.microsoft.com/t5/Fabric-Ideas/field-of-quot-duration-quot-type/idi-p/4462409": {
+      "title": "field of \"duration\" type",
+      "description": "No description",
+      "votes": "1,477",
+      "date": "‎07-11-2015",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Ideas/field-of-quot-duration-quot-type/idi-p/4462409"
+    },
+    "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Transfer-of-ownership-of-created-dashboards/idi-p/4521233": {
+      "title": "Transfer of ownership of created dashboards",
+      "description": "No description",
+      "votes": "1,357",
+      "date": "‎05-11-2015",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Transfer-of-ownership-of-created-dashboards/idi-p/4521233"
+    },
+    "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Better-Auditing-of-User-Activity-Datasets-Reports-Dashboards/idi-p/4536918": {
+      "title": "Better Auditing of User Activity (Datasets, Reports, Dashboards, Exports)",
+      "description": "No description",
+      "votes": "1,348",
+      "date": "‎04-01-2016",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Better-Auditing-of-User-Activity-Datasets-Reports-Dashboards/idi-p/4536918"
+    },
+    "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Provide-enterprise-gateway-support-for-power-bi-python-scripting/idi-p/4459722": {
+      "title": "Provide enterprise gateway support for power bi python scripting",
+      "description": "No description",
+      "votes": "1,337",
+      "date": "‎05-23-2019",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Provide-enterprise-gateway-support-for-power-bi-python-scripting/idi-p/4459722"
+    },
+    "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Security-Ability-to-maintain-source-security-for-reports/idi-p/4480567": {
+      "title": "Security - Ability to maintain source security for reports published on BI Sites",
+      "description": "No description",
+      "votes": "1,101",
+      "date": "‎03-02-2015",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Security-Ability-to-maintain-source-security-for-reports/idi-p/4480567"
+    },
+    "https://community.fabric.microsoft.com/t5/Fabric-Ideas/MySQL-over-SSH-connection/idi-p/4436384": {
+      "title": "MySQL over SSH connection",
+      "description": "No description",
+      "votes": "777",
+      "date": "‎01-28-2015",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Ideas/MySQL-over-SSH-connection/idi-p/4436384"
+    },
+    "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Allow-more-data-points-to-be-displayed-on-a-map/idi-p/4447192": {
+      "title": "Allow more data points to be displayed on a map",
+      "description": "No description",
+      "votes": "703",
+      "date": "‎03-31-2015",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Allow-more-data-points-to-be-displayed-on-a-map/idi-p/4447192"
+    },
+    "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Custom-Reusable-DAX-Function/idi-p/4473185": {
+      "title": "Custom (Reusable) DAX Function",
+      "description": "No description",
+      "votes": "686",
+      "date": "‎02-28-2017",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Custom-Reusable-DAX-Function/idi-p/4473185"
+    },
+    "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Grouping-Fields-into-dimensions-and-measure/idi-p/4442831": {
+      "title": "Grouping Fields into dimensions and measure",
+      "description": "No description",
+      "votes": "683",
+      "date": "‎01-04-2015",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Grouping-Fields-into-dimensions-and-measure/idi-p/4442831"
+    },
+    "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Support-Display-Folders-for-Table-Objects/idi-p/4437041": {
+      "title": "Support Display Folders for Table Objects",
+      "description": "No description",
+      "votes": "661",
+      "date": "‎12-12-2018",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Support-Display-Folders-for-Table-Objects/idi-p/4437041"
+    },
+    "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Report-page-tooltip-on-all-objects/idi-p/4448103": {
+      "title": "Report page tooltip on all objects",
+      "description": "No description",
+      "votes": "641",
+      "date": "‎03-08-2018",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Report-page-tooltip-on-all-objects/idi-p/4448103"
+    },
+    "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Power-Map-integration/idi-p/4505947": {
+      "title": "Power Map integration",
+      "description": "No description",
+      "votes": "576",
+      "date": "‎02-01-2015",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Power-Map-integration/idi-p/4505947"
+    },
+    "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Printing-custom-visualizations/idi-p/4487673": {
+      "title": "Printing custom visualizations",
+      "description": "No description",
+      "votes": "574",
+      "date": "‎01-09-2017",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Printing-custom-visualizations/idi-p/4487673"
+    },
+    "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Configure-S3-shortcut-using-temporary-credentials/idi-p/4508519": {
+      "title": "Configure S3 shortcut using temporary credentials.",
+      "description": "Currently, Microsoft Fabric supports only long-term credentials for S3 shortcuts. However, I would like to suggest the addition of support for temporary credentials obtained through boto3. Specifically, it would be extremely beneficial if the connection could use a sessionToken along with the access_key and secret_key.",
+      "votes": "12",
+      "date": "‎05-23-2024",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Configure-S3-shortcut-using-temporary-credentials/idi-p/4508519"
+    },
+    "https://community.fabric.microsoft.com/t5/Fabric-Ideas/bd-p/fbc_ideas": {
+      "title": "Enrich applicaiton name property when connecting to SQL Server databases",
+      "description": "No description",
+      "votes": "16",
+      "date": "‎10-07-2024",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Ideas/idb-p/fbc_ideas"
+    },
+    "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Identity-Federation-for-S3-shortcuts-for-tokenless/idi-p/4507528": {
+      "title": "Identity Federation for S3 shortcuts for tokenless Authentication based on Workspace Identity",
+      "description": "To work with S3 shortcuts without storing credentials somewhere in Fabric would be amazing and more secure.",
+      "votes": "20",
+      "date": "‎10-25-2024",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Identity-Federation-for-S3-shortcuts-for-tokenless/idi-p/4507528"
+    },
+    "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Sort-matrix-by-Parameter-field/idi-p/4506104": {
+      "title": "Sort matrix by Parameter field",
+      "description": "I really like the ability to use Parameter fields in my matrix visuals, but it would be even better if I was able to sort the matrix based on the (first) field I select in my parameter fileld value. Different kind of Bar charts will automatically sort by the first parameter filed selected, so here it works \"per default\"",
+      "votes": "5",
+      "date": "‎09-30-2022",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Sort-matrix-by-Parameter-field/idi-p/4506104"
+    },
+    "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Field-Parameter-Maintains-Matrix-Drill-Level/idi-p/4515109": {
+      "title": "Field Parameter Maintains Matrix Drill Level",
+      "description": "I've been using field parameters to toggle between which field is displayed in a matrix. This works great when there's only one level of rows to display. However, when I include an additional row level to my matrix, changing the field parameter will reset the drill level to the highest level every time. This leads to poor user experience for the audience, as they have to click to expand the rows every time. It would be great if the field parameters would maintain the user-defined drill level, instead of resetting it.",
+      "votes": "20",
+      "date": "‎06-28-2022",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Field-Parameter-Maintains-Matrix-Drill-Level/idi-p/4515109"
+    },
+    "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Automatically-Drill-Down-Expand-Matrix-when-using-field/idi-p/4520217": {
+      "title": "Automatically Drill-Down/Expand Matrix when using field parameters",
+      "description": "The field parameters are a really handy feature for creating dynamic reports which let viewers choose the look of their matrix.",
+      "votes": "3",
+      "date": "‎03-07-2024",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Ideas/Automatically-Drill-Down-Expand-Matrix-when-using-field/idi-p/4520217"
+    }
+  }
+}

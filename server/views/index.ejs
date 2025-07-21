@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Power BI Ideas Tracker</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+</head>
+<body class="bg-gray-100 text-gray-800 p-6">
+  <div class="max-w-7xl mx-auto">
+    <h1 class="text-3xl font-bold mb-6 text-blue-700">💡 Power BI Ideas Tracker</h1>
+
+    <div class="mb-4 space-x-2">
+      <% statuses.forEach(function(status,index) { %>
+        <button onclick="showTab('<%= status.replace(/\s+/g, '-') %>')" class="tab-button bg-gray-200 hover:bg-blue-100 text-sm px-3 py-2 rounded" id="btn-<%= status.replace(/\s+/g, '-') %>">
+          <%= statuses_label[index] %>
+        </button>
+      <% }); %>
+    </div>
+
+    <% statuses.forEach(function(status, index) { %>
+      <div id="<%= status.replace(/\s+/g, '-') %>" class="tab-content <%= index === 0 ? 'block' : 'hidden' %>">
+   
+        <% if (data && data[status]) { %>
+          <div class="overflow-x-auto">
+            <table class="min-w-full border rounded" id="table-<%= status.replace(/\s+/g, '-') %>">
+              <thead class="bg-blue-200 text-gray-700">
+                <tr>
+                  <th class="px-4 py-2 text-left">Title</th>
+                  <th class="px-4 py-2 text-left">Votes</th>
+                  <th class="px-4 py-2 text-left">Date</th>
+                </tr>
+              </thead>
+              <tbody>
+                <% Object.values(data[status]).forEach(idea => { %>
+                  <tr class="bg-white border-t hover:bg-gray-50">
+                    <td class="px-4 py-2">
+                      <a href="<%= idea.url %>" target="_blank" class="text-blue-600 hover:underline">
+                        <%= idea.title %>
+                      </a>
+                    </td>
+                    <td class="px-4 py-2 font-semibold text-green-700"><%= idea.votes %></td>
+                    <td class="px-4 py-2"><%= idea.date %></td>
+                  </tr>
+                <% }); %>
+              </tbody>
+            </table>
+          </div>
+        <% } else { %>
+          <p class="text-sm text-gray-600">No ideas found for this status.</p>
+        <% } %>
+      </div>
+    <% }); %>
+  </div>
+
+  <script>
+    function showTab(tabId) {
+      document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
+      document.getElementById(tabId).classList.remove('hidden');
+      document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('bg-blue-500', 'text-white'));
+      document.getElementById('btn-' + tabId).classList.add('bg-blue-500', 'text-white');
+    }
+
+    // Init first table as visible tab and activate DataTables
+    window.onload = () => {
+      document.querySelector('.tab-button')?.click();
+      <% statuses.forEach(function(status) { %>
+        $('#table-<%= status.replace(/\s+/g, '-') %>').DataTable({
+          paging: false,
+          searching: true,
+          info: false
+        });
+      <% }); %>
+    };
+  </script>
+</body>
+</html>
