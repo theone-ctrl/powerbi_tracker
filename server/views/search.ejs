@@ -1,0 +1,44 @@
+<!-- views/search.ejs -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Power BI Idea Search</title>
+  <style>
+    body { font-family: Arial, sans-serif; display: flex; flex-direction: column; align-items: center; margin-top: 50px; }
+    form { margin-bottom: 30px; }
+    input[type="text"] { padding: 10px; width: 300px; border-radius: 8px; border: 1px solid #ccc; }
+    button { padding: 10px 20px; border-radius: 8px; background: #0078D4; color: white; border: none; cursor: pointer; }
+    .result { max-width: 800px; margin-top: 20px; }
+    .card { background: #f8f8f8; padding: 15px; margin-bottom: 10px; border-radius: 8px; box-shadow: 0 1px 4px rgba(0,0,0,0.1); }
+  </style>
+</head>
+<body>
+  <form action="/search" method="POST">
+    <input type="text" name="query" placeholder="Enter a keyword..." required>
+    <button type="submit">Search</button>
+  </form>
+
+  <% if (finalSummary) { %>
+  <div class="result">
+    <h2>🧠 Final Summary for <%= query %></h2>
+    <div class="card">
+      <strong>User Pain Points</strong>
+      <p><%= finalSummary.painPoints %></p>
+    </div>
+    <div class="card">
+      <strong>User Needs</strong>
+      <p><%= finalSummary.needs %></p>
+    </div>
+    <div class="card">
+      <strong>What’s Missing</strong>
+      <p><%= finalSummary.missing %></p>
+    </div>
+    <div class="card">
+      <strong>Suggested Solutions</strong>
+      <p><%= finalSummary.solutions %></p>
+    </div>
+  </div>
+<% } %>
+
+</body>
+</html>

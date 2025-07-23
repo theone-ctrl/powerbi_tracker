@@ -1,0 +1,18 @@
+Based on the following list of summarized Power BI ideas, analyze and extract the following insights:
+
+1. **User Pain Points** – What common challenges or frustrations do users face?
+2. **User Needs** – What are users ultimately trying to achieve or improve?
+3. **What's Missing** – What functionalities, features, or support are currently lacking in Power BI?
+4. **Recommended Solution Directions** – What changes, improvements, or additions would best address the gaps and user expectations?
+
+Focus on clarity and theme-level insights rather than summarizing each idea again. Be concise and insightful.
+
+Return your output strictly in the following JSON format:
+
+{
+  "painPoints": "string",
+  "needs": "string",
+  "missing": "string",
+  "solutions": "string"
+}
+
