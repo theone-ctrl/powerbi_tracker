@@ -102,10 +102,8 @@
       margin-bottom: 10px;
     }
   </style>
-  <script src="https://unpkg.com/lucide@latest"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <script>
-  lucide.createIcons();
 </script>
   <script>
     // Right-click update stub
@@ -209,6 +207,14 @@
         });</script>
       <% } %>
     </div>
+  
+    
+  <div id="loader" style="display: none; text-align: center; padding: 60px;">
+    <div class="spinner" style="margin: 0 auto 20px;"></div>
+    <p style="font-size: 18px; color: #333;">⏳ Your report is getting ready...</p>
+    <p style="font-size: 14px; color: #888;">This may take 2–5 minutes. Please don’t refresh or close the page.</p>
+  </div>
+
 
   <% if (typeof error !== 'undefined' && error) { %>
     <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 40px; border: 2px dashed #ccc; border-radius: 12px; background-color: #f9f9f9; font-family: 'Segoe UI', sans-serif;">
@@ -235,7 +241,7 @@
     </div>
   <% } %>
 
-    <form action="/search" method="POST" class="inputPane">
+    <form action="/search" id="submitForm" method="POST" class="inputPane">
       <input type="text" name="query" id="query" placeholder="Enter a keyword..." required>
       <button type="submit">Search</button>
     </form>
@@ -249,6 +255,42 @@
     input.value = sampleText;
     document.getElementById('searchForm').submit();
   }
+
+  document.addEventListener("DOMContentLoaded", () => {
+      document.getElementById('loader').style.display = 'none';
+      document.getElementById('submitForm').addEventListener('submit', (e) => {
+        e.preventDefault();
+        const query = document.getElementById('query').value;
+        if (query.trim() === '') {
+          alert('Please enter a valid query.');
+          return;
+        }
+        document.getElementById('loader').style.display = 'block';
+        const placeholder = document.getElementById('emptyplaceholder');
+        if(placeholder){
+          placeholder.style.display = 'none';
+        }
+        fetch('/search', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ query: query }) // Correctly JSON-stringify the entire object
+        })
+        .then(response => response.json())
+        .then(data => {
+          document.querySelector(".resultPane").innerHTML = renderResult(data.fetchSummary);
+          cachedQueries = data.cachedQueries || [];
+          query = data.query || '';
+          document.getElementById('loader').style.display = 'none';
+        })
+        .catch(error => {
+          console.error('Error:', error);
+          document.getElementById('loader').style.display = 'none';
+        });
+      });
+  });
+
 </script>
 
 </html>

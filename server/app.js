@@ -12,6 +12,7 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.json()); // This enables JSON body parsing
 
 // --- Home Route (Shows static ideas from ideas.json) ---
 app.get('/', (req, res) => {
@@ -73,6 +74,7 @@ app.get('/load', (req, res) => {
 
 // --- Search Handler (POST triggers scrape, dedup, summarize) ---
 app.post('/search', async (req, res) => {
+  console.log(req.body)
   const query = req.body.query;
   if (!query || !query.trim()) {
     return res.render('search', { finalSummary : null , cachedQueries: []});
@@ -80,7 +82,7 @@ app.post('/search', async (req, res) => {
   console.log('🔄 Gathering Ideas');
   const rawIdeas = await scrapeIdeasSummary(query);
   if(rawIdeas.length === 0) {
-    return res.render('search', { finalSummary: null, query: query, cachedQueries: [] , error: 'No ideas found for the given query.' });
+    return res.render('search', { finalSummary: {}, query: query, cachedQueries: [] , error: 'No ideas found for the given query.' });
   }
   console.log('🔄 Filtering Duplicates');
   const uniqueIdeas = deduplicate(rawIdeas);
@@ -96,7 +98,17 @@ app.post('/search', async (req, res) => {
     console.error('Failed to load cached queries', err);
     cachedQueries = [];
   }
-  res.render('search', { finalSummary: summarizedIdeas, cachedQueries:cachedQueries,  query: query });
+ // res.render('search', { finalSummary: summarizedIdeas, cachedQueries:cachedQueries,  query: query });
+   return res.json({
+    success: true,  
+    data: {
+      tags: summarizedIdeas.tags,
+      totalIdeas: summarizedIdeas.total_ideas,
+      insights: summarizedIdeas.insights,
+      cachedQueries: cachedQueries,
+      query: summarizedIdeas.query
+    } 
+  });
 });
 
 // --- Utility: Remove duplicate ideas based on URL ---
