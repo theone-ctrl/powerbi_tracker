@@ -168,6 +168,74 @@
     <div class="card"><strong>Suggested Solutions</strong><p>${(insights.recommendedSolutions || []).join('<br>')}</p></div>
   `;
 }
+
+
+document.addEventListener('DOMContentLoaded',async function () {
+    document.getElementById('searchForm').addEventListener('submit', async function(event) {
+      event.preventDefault(); // ✅ Stop normal form submission
+      document.getElementById('emptyplaceholder').style.display = 'none';
+
+      const query = document.getElementById('query').value;
+
+      if (!query) return;
+
+      // Start milestone UI
+        pollMilestone(0); // start from stage 0
+
+        // Submit the query via fetch
+        try {
+          const response = await fetch('/search', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ query })
+          });
+
+          const resultHTML = await response.text();
+          document.open();
+          document.write(resultHTML);
+          document.close();
+        } catch (err) {
+          console.error('Submission failed:', err);
+        }
+      });
+});
+
+
+
+  function submitSample(sampleText) {
+    const input = document.getElementById('query');
+    input.value = sampleText;
+    document.getElementById('searchForm').submit();
+  }
+
+    
+
+  async function updateMilestone(){
+    const res = await fetch('/api/progress');
+    const data = await res.json();
+    const totalStages = 5;
+    console.log(data);
+    const stageIndex = data.stageIndex || 0; // Default to 0 if not provided
+    for (let i = 0; i < totalStages; i++) {
+      document.querySelector(`.stage-${i}-inprogress`)?.style.setProperty('display', i === stageIndex ? 'inline' : 'none');
+      document.querySelector(`.stage-${i}-done`)?.style.setProperty('display', i < stageIndex ? 'inline' : 'none');
+      document.querySelector(`.stage-${i}-pending`)?.style.setProperty('display', i > stageIndex ? 'inline' : 'none');
+    }
+  updateUIWithProgress(data);
+  }
+
+  function pollMilestone(){
+    const milestoneContainer = document.querySelector('.milestone-container').style.display = 'block';
+      window.milestone = setInterval(async () => {
+        updateMilestone();
+      }, 3000);
+  }
+
+  function stopPollingMilestone() {
+    clearInterval(window.milestone);
+  }
   </script>
 </head>
 <body>
@@ -217,6 +285,37 @@
     </div>
   <% } %>
 
+   <% 
+  const stages = [
+    'Gathering Ideas', 
+    'Ideas Collected', 
+    'Summarization', 
+    'Block Summary', 
+    'Final Summary', 
+  ];
+  const currentStage = typeof milestoneStage !== 'undefined' ? milestoneStage : 0; // You can pass `milestoneStage` from your controller
+%>
+
+<div class="milestone-container" style="display:none;margin: 40px auto; max-width: 640px; text-align: center; font-family: 'Segoe UI', sans-serif;">
+  <h3 style="margin-bottom: 20px; color: #444;">Processing Stages</h3>
+  <ul style="list-style: none; padding: 0; text-align: left;">
+    <% stages.forEach((stageName, index) => { %>
+      <li 
+        class="milestone-stage stage-<%= index %>" 
+        data-stage-index="<%= index %>" 
+        style="margin: 10px 0; padding: 10px; border-left: 5px solid <%= index <= currentStage ? '#4caf50' : '#ccc' %>; background-color: <%= index <= currentStage ? '#e8f5e9' : '#f1f1f1' %>; border-radius: 4px;"
+      >
+        <strong><%= stageName %></strong>
+
+        <!-- Status spans -->
+        <span class="milestone-status stage-<%= index %>-inprogress" style="float: right; color: #4caf50; display: <%= index === currentStage ? 'inline' : 'none' %>;">In Progress...</span>
+        <span class="milestone-status stage-<%= index %>-done" style="float: right; color: #4caf50; display: <%= index < currentStage ? 'inline' : 'none' %>;">✔ Done</span>
+        <span class="milestone-status stage-<%= index %>-pending" style="float: right; color: #bbb; display: <%= index > currentStage ? 'inline' : 'none' %>;">Pending</span>
+      </li>
+    <% }) %>
+  </ul>
+</div>
+
   <% if (!finalSummary) { %>
     <div id="emptyplaceholder" style="display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 40px; border: 2px dashed #ccc; border-radius: 12px; background-color: #f9f9f9; font-family: 'Segoe UI', sans-serif;">
       <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="#999" viewBox="0 0 24 24">
@@ -232,20 +331,11 @@
     </div>
   <% } %>
 
-    <form action="/search" method="POST" class="inputPane">
+    <form action="" id="searchForm" method="" class="inputPane">
       <input type="text" name="query" id="query" placeholder="Enter a keyword..." required>
       <button type="submit">Search</button>
     </form>
   </div>
 
 </body>
-
-<script>
-  function submitSample(sampleText) {
-    const input = document.getElementById('query');
-    input.value = sampleText;
-    document.getElementById('searchForm').submit();
-  }
-</script>
-
 </html>

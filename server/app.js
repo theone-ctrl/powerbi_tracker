@@ -71,6 +71,14 @@ app.get('/load', (req, res) => {
   }
 });
 
+app.get('/progress', async (req, res) => {
+  let data = fs.readFileSync('./mileStone.json', 'utf8');
+  data = res.json(JSON.parse(data));
+  console.log(data)
+  return data;
+});
+
+
 // --- Search Handler (POST triggers scrape, dedup, summarize) ---
 app.post('/search', async (req, res) => {
   const query = req.body.query;
@@ -78,13 +86,16 @@ app.post('/search', async (req, res) => {
     return res.render('search', { finalSummary : null , cachedQueries: []});
   }
   console.log('🔄 Gathering Ideas');
+  fs.writeFileSync('./mileStone.json', JSON.stringify(0, null, 2));
   const rawIdeas = await scrapeIdeasSummary(query);
   if(rawIdeas.length === 0) {
     return res.render('search', { finalSummary: null, query: query, cachedQueries: [] , error: 'No ideas found for the given query.' });
   }
   console.log('🔄 Filtering Duplicates');
-  const uniqueIdeas = deduplicate(rawIdeas);
+  fs.writeFileSync('./mileStone.json', JSON.stringify(1, null, 2));
+  const uniqueIdeas = deduplicate(rawIdeas); //not did anything here
   console.log('🔄 Starting summarization process...');
+  fs.writeFileSync('./mileStone.json', JSON.stringify(2, null, 2));
   const summarizedIdeas = await summarizeInBatches(uniqueIdeas, 15000 , query);
   console.log('🔄 Final report summary generated');
   let cachedQueries = [];

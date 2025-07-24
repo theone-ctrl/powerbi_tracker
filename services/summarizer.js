@@ -1,5 +1,6 @@
 require('dotenv').config();
 const db = require('../services/db');
+const fs = require('fs');
 
 // Create table if not exists
 db.prepare(`
@@ -70,6 +71,7 @@ async function summarizeInBatches(ideas, limit = 15000 , query = '') {
     const desc = idea.description || '';
     if ((currentText + desc).length > limit && desc !== '') {
       console.log('🔄 Block Summary started..');
+      fs.writeFileSync('./mileStone.json', JSON.stringify(3, null, 2));
       const summary = await summarizeBlock(currentText, batchPrompt);
       summaries.push(summary);
       currentText = '';
@@ -78,11 +80,13 @@ async function summarizeInBatches(ideas, limit = 15000 , query = '') {
   }
 
   console.log('🔄 Final Summary Started..');
+  fs.writeFileSync('./mileStone.json', JSON.stringify(4, null, 2));
   let finalSummary = '';
   if (currentText.trim()) {
     finalSummary = await summarizeBlock(currentText, finalPrompt, process.env.summary_model);
   }
   console.log('🔄 Final Summary Finshed..');
+  fs.writeFileSync('./mileStone.json', JSON.stringify(5, null, 2));
   finalSummary = JSON.parse(finalSummary);
   finalSummary.total_ideas = ideas.length;
   finalSummary.query = query;
