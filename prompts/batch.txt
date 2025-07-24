@@ -1,0 +1,1 @@
+The following text contains multiple Power BI idea descriptions combined in a single string. Break them down and summarize each idea individually. For each idea, extract its core purpose or value, without dwelling on technical details or long explanations. Be concise, but ensure clarity.
