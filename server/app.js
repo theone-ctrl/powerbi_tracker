@@ -102,7 +102,7 @@ app.post('/search', async (req, res) => {
    return res.json({
     success: true,  
     tags: summarizedIdeas.tags,
-    totalIdeas: summarizedIdeas.total_ideas,
+    total_ideas: summarizedIdeas.total_ideas,
     insights: summarizedIdeas.insights,
     cachedQueries: cachedQueries,
     query: summarizedIdeas.query
