@@ -147,27 +147,30 @@
     }
 
    function renderResult(data) {
-  document.getElementById('emptyplaceholder').style.display = 'none';
-  if (!data) return "<p>No data available.</p>";
+      const placeholder = document.getElementById('emptyplaceholder');
+      if(placeholder){
+        placeholder.style.display = 'none';
+      }
+      if (!data) return "<p>No data available.</p>";
 
-  const tags = data.tags || {};
-  const tagChips = Object.entries(tags)
-    .map(([tag, details]) => `<span class="tag-chip">${tag} (${details.count})</span>`)
-    .join(' ');
+      const tags = data.tags || {};
+      const tagChips = Object.entries(tags)
+        .map(([tag, details]) => `<span class="tag-chip">${tag} (${details.count})</span>`)
+        .join(' ');
 
-  const insights = data.insights || {};
-  
-  return `
-    <h2>🧠 Summary for "${data.query}"</h2>
-    <div class="idea-count">Analyzed Ideas: ${(data.total_ideas || 0)}</div>
-    <div style="margin-bottom:10px">${tagChips}</div>
+      const insights = data.insights || {};
+      
+      return `
+        <h2>🧠 Summary for "${data.query}"</h2>
+        <div class="idea-count">Analyzed Ideas: ${(data.total_ideas || 0)}</div>
+        <div style="margin-bottom:10px">${tagChips}</div>
 
-    <div class="card"><strong>User Pain Points</strong><p>${(insights.userPainPoints || []).join('<br>')}</p></div>
-    <div class="card"><strong>User Needs</strong><p>${(insights.userNeeds || []).join('<br>')}</p></div>
-    <div class="card"><strong>What’s Missing</strong><p>${(insights.missingFeatures || []).join('<br>')}</p></div>
-    <div class="card"><strong>Suggested Solutions</strong><p>${(insights.recommendedSolutions || []).join('<br>')}</p></div>
-  `;
-}
+        <div class="card"><strong>User Pain Points</strong><p>${(insights.userPainPoints || []).join('<br>')}</p></div>
+        <div class="card"><strong>User Needs</strong><p>${(insights.userNeeds || []).join('<br>')}</p></div>
+        <div class="card"><strong>What’s Missing</strong><p>${(insights.missingFeatures || []).join('<br>')}</p></div>
+        <div class="card"><strong>Suggested Solutions</strong><p>${(insights.recommendedSolutions || []).join('<br>')}</p></div>
+      `;
+    }
   </script>
 </head>
 <body>
