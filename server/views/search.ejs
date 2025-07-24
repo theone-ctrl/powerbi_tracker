@@ -279,7 +279,7 @@
         })
         .then(response => response.json())
         .then(data => {
-          document.querySelector(".resultPane").innerHTML = renderResult(data.fetchSummary);
+          document.querySelector(".resultPane").innerHTML = renderResult(data);
           cachedQueries = data.cachedQueries || [];
           query = data.query || '';
           document.getElementById('loader').style.display = 'none';
@@ -287,7 +287,7 @@
         .catch(error => {
           console.error('Error:', error);
           document.getElementById('loader').style.display = 'none';
-        });
+        });f
       });
   });
 

@@ -101,13 +101,11 @@ app.post('/search', async (req, res) => {
  // res.render('search', { finalSummary: summarizedIdeas, cachedQueries:cachedQueries,  query: query });
    return res.json({
     success: true,  
-    data: {
-      tags: summarizedIdeas.tags,
-      totalIdeas: summarizedIdeas.total_ideas,
-      insights: summarizedIdeas.insights,
-      cachedQueries: cachedQueries,
-      query: summarizedIdeas.query
-    } 
+    tags: summarizedIdeas.tags,
+    totalIdeas: summarizedIdeas.total_ideas,
+    insights: summarizedIdeas.insights,
+    cachedQueries: cachedQueries,
+    query: summarizedIdeas.query
   });
 });
 
