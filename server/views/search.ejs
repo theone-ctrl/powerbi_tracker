@@ -1,44 +1,207 @@
-<!-- views/search.ejs -->
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Power BI Idea Search</title>
+  <title>Power BI Idea Assistant</title>
   <style>
-    body { font-family: Arial, sans-serif; display: flex; flex-direction: column; align-items: center; margin-top: 50px; }
-    form { margin-bottom: 30px; }
-    input[type="text"] { padding: 10px; width: 300px; border-radius: 8px; border: 1px solid #ccc; }
-    button { padding: 10px 20px; border-radius: 8px; background: #0078D4; color: white; border: none; cursor: pointer; }
-    .result { max-width: 800px; margin-top: 20px; }
-    .card { background: #f8f8f8; padding: 15px; margin-bottom: 10px; border-radius: 8px; box-shadow: 0 1px 4px rgba(0,0,0,0.1); }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      display: flex;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    /* Left side pane */
+    .sidebar {
+      width: 15%;
+      background-color: #f2f2f2;
+      padding: 15px;
+      overflow-y: auto;
+      border-right: 1px solid #ddd;
+    }
+
+    .sidebar h3 {
+      margin-top: 0;
+    }
+
+    .sidebar input[type="text"] {
+    width: 80%;
+    padding: 7px;
+    margin: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    }
+
+    .idea-item {
+      padding: 10px;
+      margin-bottom: 6px;
+      border-radius: 6px;
+      background-color: #fff;
+      cursor: pointer;
+      border: 1px solid #ccc;
+    }
+
+    .idea-item:hover {
+      background-color: #e7e7e7;
+    }
+
+    /* Right main content */
+    .main-content {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 20px;
+    }
+
+    .resultPane {
+      flex-grow: 1;
+      overflow-y: auto;
+    }
+
+    .inputPane {
+      display: flex;
+      border-top: 1px solid #ccc;
+      padding-top: 10px;
+      margin-top: 10px;
+    }
+
+    .inputPane input[type="text"] {
+      flex: 1;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    .inputPane button {
+      padding: 10px 20px;
+      margin-left: 10px;
+      border-radius: 8px;
+      background: #0078D4;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    .card {
+      background: #f8f8f8;
+      padding: 15px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    }
+
+    .tag-chip {
+      display: inline-block;
+      background-color: #0078D4;
+      color: white;
+      padding: 4px 10px;
+      margin: 2px;
+      border-radius: 12px;
+      font-size: 12px;
+    }
+
+    .idea-count {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 10px;
+    }
   </style>
+
+  <script>
+    // Right-click update stub
+    function refreshSummary(query) {
+      if (confirm(`Re-analyze summary for "${query}"?`)) {
+        fetch(`/refresh?query=${encodeURIComponent(query)}`)
+          .then(() => location.reload());
+      }
+    }
+
+    function filterIdeas() {
+      const value = document.getElementById('filterInput').value;
+      if(value.length == ''){
+         const items = document.querySelectorAll('.querylist li');
+        items.forEach(item => {
+          item.style.display = 'block'
+        });
+        return
+      }
+      if(value.length < 3) {
+        alert('Please enter at least 3 characters to filter.');
+        return;
+      }
+      const filter = value.toLowerCase();
+      const items = document.querySelectorAll('.querylist li');
+      items.forEach(item => {
+        item.style.display = item.textContent.toLowerCase().includes(filter) ? 'block' : 'none';
+      });
+    }
+
+    // Sidebar click load
+    function loadQuery(id) {
+      fetch(`/load?id=${id}`)
+        .then(res => res.json())
+        .then(data => {
+          console.log('Loaded data:', data);
+          document.querySelector(".resultPane").innerHTML = renderResult(data.data);
+        });
+    }
+
+   function renderResult(data) {
+  if (!data) return "<p>No data available.</p>";
+
+  const tags = data.tags || {};
+  const tagChips = Object.entries(tags)
+    .map(([tag, details]) => `<span class="tag-chip">${tag} (${details.count})</span>`)
+    .join(' ');
+
+  const insights = data.insights || {};
+  
+  return `
+    <h2>🧠 Summary for "${data.query}"</h2>
+    <div class="idea-count">Analyzed Ideas: ${(data.total_ideas || 0)}</div>
+    <div>${tagChips}</div>
+
+    <div class="card"><strong>User Pain Points</strong><p>${(insights.userPainPoints || []).join('<br>')}</p></div>
+    <div class="card"><strong>User Needs</strong><p>${(insights.userNeeds || []).join('<br>')}</p></div>
+    <div class="card"><strong>What’s Missing</strong><p>${(insights.missingFeatures || []).join('<br>')}</p></div>
+    <div class="card"><strong>Suggested Solutions</strong><p>${(insights.recommendedSolutions || []).join('<br>')}</p></div>
+  `;
+}
+  </script>
 </head>
 <body>
-  <form action="/search" method="POST">
-    <input type="text" name="query" placeholder="Enter a keyword..." required>
-    <button type="submit">Search</button>
-  </form>
 
-  <% if (finalSummary) { %>
-  <div class="result">
-    <h2>🧠 Final Summary for <%= query %></h2>
-    <div class="card">
-      <strong>User Pain Points</strong>
-      <p><%= finalSummary.painPoints %></p>
-    </div>
-    <div class="card">
-      <strong>User Needs</strong>
-      <p><%= finalSummary.needs %></p>
-    </div>
-    <div class="card">
-      <strong>What’s Missing</strong>
-      <p><%= finalSummary.missing %></p>
-    </div>
-    <div class="card">
-      <strong>Suggested Solutions</strong>
-      <p><%= finalSummary.solutions %></p>
-    </div>
+  <!-- Sidebar -->
+ <div style="display: flex; width: 100vw; height: 100vh;">
+  <!-- Sidebar -->
+  <div id="sidebar" style="width: 280px; background: #f0f2f5; padding: 20px; overflow-y: auto;">
+    <h3 style="margin-top: 0;">📌 Previous Queries</h3>
+    <input type="text" id="filterInput" placeholder="Search..." onchange="filterIdeas()" style="width: 100%; padding: 8px; margin-bottom: 10px; border-radius: 6px; border: 1px solid #ccc;" />
+    <ul id="queryList" class="querylist" style="list-style: none; padding: 0;">
+      <% cachedQueries.forEach(q => { %>
+        <li style="margin-bottom: 10px; cursor: pointer;" onclick="loadQuery('<%= q[0] %>')">
+          <%= q[1] %>
+        </li>
+      <% }) %>
+    </ul>
   </div>
-<% } %>
+
+  <!-- Main Pane -->
+  <div class="main-content">
+    <div class="resultPane">
+      <% if (finalSummary) { %>
+        <script>document.addEventListener("DOMContentLoaded", () => {
+          document.querySelector(".resultPane").innerHTML = renderResult(<%- JSON.stringify(finalSummary) %>);
+        });</script>
+      <% } %>
+    </div>
+
+    <form action="/search" method="POST" class="inputPane">
+      <input type="text" name="query" placeholder="Enter a keyword..." required>
+      <button type="submit">Search</button>
+    </form>
+  </div>
 
 </body>
 </html>

@@ -1,29 +1,68 @@
 require('dotenv').config();
-console.log(process.env.SUMMARIZER)
-const useOpenAI = process.env.SUMMARIZER === 'openai';
+const db = require('../services/db');
 
-const batchPrompt = `The following text contains multiple Power BI idea descriptions combined in a single string. Break them down and summarize each idea individually. For each idea, extract its core purpose or value, without dwelling on technical details or long explanations. Do not cut words. Be concise, but ensure clarity:\n\n`;
-const finalPrompt = `Based on the following list of summarized Power BI ideas, analyze and extract the following insights:
+// Create table if not exists
+db.prepare(`
+  CREATE TABLE IF NOT EXISTS idea_insights_cache (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    query TEXT UNIQUE NOT NULL,
+    tags TEXT,
+    insights TEXT,
+    last_updated DATETIME DEFAULT CURRENT_TIMESTAMP
+  )
+`).run();
 
-1. **User Pain Points** – What common challenges or frustrations do users face?
-2. **User Needs** – What are users ultimately trying to achieve or improve?
-3. **What's Missing** – What functionalities, features, or support are currently lacking in Power BI?
-4. **Recommended Solution Directions** – What changes, improvements, or additions would best address the gaps and user expectations?
 
-Focus on clarity and theme-level insights rather than summarizing each idea again. Be concise and insightful.
+// Function to insert or update cache
+function cacheIdeaInsights(query, tagsObj, insightsObj, totalIdeas) {
+  const stmt = db.prepare(`
+    INSERT INTO idea_insights_cache (query, tags, insights, total_ideas)
+    VALUES (?, ?, ?, ?)
+    ON CONFLICT(query) DO UPDATE SET
+      tags = excluded.tags,
+      insights = excluded.insights,
+      last_updated = CURRENT_TIMESTAMP,
+      total_ideas = excluded.total_ideas
+  `);
 
-Return your output strictly in the following JSON format:
-
-{
-  "painPoints": "string",
-  "needs": "string",
-  "missing": "string",
-  "solutions": "string"
+  stmt.run(
+    query,
+    JSON.stringify(tagsObj),
+    JSON.stringify(insightsObj),
+    totalIdeas
+  );
 }
 
-Summarized Ideas:`;
 
-async function summarizeInBatches(ideas, limit = 15000) {
+const batchPrompt = `The following text contains multiple Power BI idea descriptions combined in a single string. Break them down and summarize each idea individually. For each idea, extract its core purpose or value, without dwelling on technical details or long explanations. Do not cut words. Be concise, but ensure clarity:\n\n`;
+const finalPrompt = `You are an expert product analyst for Power BI user feedback.
+
+Given the following list of summarized user ideas, extract deep insights in the following JSON format:
+
+{
+  "tags": {
+    "Performance": {
+      "count": 3,
+      "examples": ["Faster loading time needed", "Dashboards lag on refresh", ...]
+    },
+    "Sharing": {
+      "count": 2,
+      "examples": ["Easier team-level access control", ...]
+    },
+    ...
+  },
+  "insights": {
+    "userPainPoints": ["Slow performance on large reports", "Complex access management", ...],
+    "userNeeds": ["Speed and responsiveness", "Simplified collaboration", ...],
+    "missingFeatures": ["Bulk export of bookmarks", "Custom role-based sharing logic", ...],
+    "recommendedSolutions": ["Optimize backend query cache", "Add team-level permission settings", ...]
+  }
+}
+
+Only use themes that appear multiple times. Be concise, do not repeat similar phrases. Avoid generic or vague tags.
+`;
+
+async function summarizeInBatches(ideas, limit = 15000 , query = '') {
   const summaries = [];
   let currentText = '';
 
@@ -31,7 +70,7 @@ async function summarizeInBatches(ideas, limit = 15000) {
     const desc = idea.description || '';
     if ((currentText + desc).length > limit && desc !== '') {
       console.log('🔄 Block Summary started..');
-      const summary = await summarizeBlock(currentText,batchPrompt);
+      const summary = await summarizeBlock(currentText, batchPrompt);
       summaries.push(summary);
       currentText = '';
     }
@@ -41,18 +80,22 @@ async function summarizeInBatches(ideas, limit = 15000) {
   console.log('🔄 Final Summary Started..');
   let finalSummary = '';
   if (currentText.trim()) {
-    finalSummary = await summarizeBlock(currentText,finalPrompt,process.env.summary_model);
-  } 
+    finalSummary = await summarizeBlock(currentText, finalPrompt, process.env.summary_model);
+  }
   console.log('🔄 Final Summary Finshed..');
-  console.log(JSON.parse(finalSummary));
-  return JSON.parse(finalSummary);
+  finalSummary = JSON.parse(finalSummary);
+  finalSummary.total_ideas = ideas.length;
+  finalSummary.query = query;
+  cacheIdeaInsights(query,finalSummary.tags, finalSummary.insights,ideas.length);
+  console.log('🔄 Summary cached in DB');
+  return finalSummary;
 }
 
-async function summarizeBlock(text,prompt,model = process.env.batch_model) {
+async function summarizeBlock(text, prompt, model = process.env.batch_model) {
 
   const { OpenAI } = require('openai');
   const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
-  
+
   const response = await openai.chat.completions.create({
     model: model,
     messages: [{

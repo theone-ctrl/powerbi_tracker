@@ -22,7 +22,12 @@ async function scrapeIdeasSummary(query) {
       }));
    });
 
-    results[query]  = []
+  if(ideaLinks.length === 0) {
+    console.log(`🔍 No ideas found for query: ${query}`);
+    return [];
+  }
+
+  results[query]  = []
    
   for (let idea of ideaLinks) {
     await page.goto(idea.href, { waitUntil: 'domcontentloaded', timeout: 30000 });
@@ -50,19 +55,6 @@ async function scrapeIdeasSummary(query) {
 console.log('🔄 Ideas Collected..');
 return results[query];
 
-//   for (const status of config.statuses) {
-
-    // const ideaLinks = await page.$$eval('div.MessageSubject a', (links) => {
-    //   return links.slice(0, config.top_n).map(a => ({
-    //     href: a.href,
-    //     title: a.innerText.trim()
-    //   }));
-    // });
-
-    // results[status] = {};
-
-    // }
-    await browser.close();
   }  
 
 module.exports = scrapeIdeasSummary;
